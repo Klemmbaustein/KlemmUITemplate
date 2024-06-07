@@ -1,0 +1,23 @@
+
+element MainElement
+{
+	var Message;
+
+	position = (-1, -1);
+
+	child UIBackground
+	{
+		size = (2, 2)sr;
+
+		color = (1, 0.05, 0.1);
+
+		allAlign = centered;
+
+		child UIText
+		{
+			text = Message;
+			size = 20px;
+			color = 1;
+		}
+	}
+}
