@@ -12,10 +12,8 @@ int main()
 {
 	kui::Application::Initialize("Dependencies/KlemmUI/Shaders");
 
-	std::cout << std::filesystem::current_path() << std::endl;
-
 	kui::Window appWindow = kui::Window("KlemmUI Project Template", kui::Window::WindowFlag::Resizable);
-	//appWindow.Markup.SetDefaultFont(new kui::Font("app/Font.ttf"));
+	appWindow.Markup.SetDefaultFont(new kui::Font("app/fonts/IBMPlexSans-Medium.ttf"));
 
 	auto appElement = new MainElement();
 	appElement->SetMessage("Hello, World!");

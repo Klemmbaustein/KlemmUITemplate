@@ -14,7 +14,7 @@ public:
 	this->SetPosition(Vector2f(-1,-1));
 	{
 	auto* e_1 = new KlemmUI::UIBackground(true, 0, 1);
-	e_1->SetColor(Vector3f(1,0.05,0.1));
+	e_1->SetColor(Vector3f(0.05,0.05,0.1));
 	e_1->SetMinSize(Vector2f(2,2));
 	e_1->SetMaxSize(Vector2f(2,2));
 	e_1->SetVerticalAlign(KlemmUI::UIBox::Align::Centered);
@@ -24,7 +24,7 @@ public:
 	auto* e_2 = new KlemmUI::UIText(1, 1, "", nullptr);
 	e_2->SetText(Message);
 	e_2->SetColor(Vector3f(1));
-	e_2->SetTextSize(20);
+	e_2->SetTextSize(40);
 	e_2->SetTextSizeMode(KlemmUI::UIBox::SizeMode::PixelRelative);
 	e_2->SetFont(KlemmUI::MarkupLanguageManager::GetActive()->GetFont(""));
 	e_1->AddChild(e_2);
