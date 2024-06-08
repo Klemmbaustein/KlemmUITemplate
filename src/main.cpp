@@ -1,9 +1,6 @@
 #include <KlemmUI/Application.h>
 #include <KlemmUI/Window.h>
 
-#include <filesystem>
-#include <iostream>
-
 #include "ui/MainElement.hpp"
 
 namespace kui = KlemmUI;
