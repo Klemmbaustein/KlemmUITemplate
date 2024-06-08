@@ -7,7 +7,7 @@ namespace kui = KlemmUI;
 
 int main()
 {
-	kui::Application::Initialize("Dependencies/KlemmUI/Shaders");
+	kui::Application::Initialize("app/Shaders");
 
 	kui::Window appWindow = kui::Window("KlemmUI Project Template", kui::Window::WindowFlag::Resizable);
 	appWindow.Markup.SetDefaultFont(new kui::Font("app/fonts/IBMPlexSans-Medium.ttf"));
