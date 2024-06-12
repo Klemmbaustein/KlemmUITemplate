@@ -2,12 +2,11 @@
 #include <KlemmUI/Window.h>
 
 #include "ui/MainElement.hpp"
-
 namespace kui = KlemmUI;
 
 int main()
 {
-	kui::Application::Initialize("app/Shaders");
+	kui::Application::Initialize("app/shaders");
 
 	kui::Window appWindow = kui::Window("KlemmUI Project Template", kui::Window::WindowFlag::Resizable);
 	appWindow.Markup.SetDefaultFont(new kui::Font("app/fonts/IBMPlexSans-Medium.ttf"));
@@ -17,7 +16,6 @@ int main()
 
 	while (appWindow.UpdateWindow())
 	{
-
 	}
 
 	return 0;
