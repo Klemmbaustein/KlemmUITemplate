@@ -5,9 +5,10 @@
     {
       "type": "default",
       "project": "CMakeLists.txt",
-      "projectTarget": "KlemmUITemplate.exe",
-      "name": "KlemmUITemplate.exe",
-      "currentDir": "${workspaceRoot}/"
+      // This is stupid. It should either be "KlemmUITemplate.exe" or "Debug\\KlemmUITemplate.exe"
+      "projectTarget": "KlemmUITemplate.exe (Debug\\KlemmUITemplate.exe)",
+      "name": "KlemmUITemplate.exe (Debug\\KlemmUITemplate.exe)",
+      "currentDir": "${workspaceRoot}"
     }
   ]
 }

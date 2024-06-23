@@ -1,4 +1,6 @@
 
+const backgroundColor = (0.05, 0.05, 0.15);
+
 element MainElement
 {
 	var Message;
@@ -9,7 +11,7 @@ element MainElement
 	{
 		size = (2, 2)sr;
 
-		color = (0.05, 0.05, 0.1);
+		color = backgroundColor;
 
 		allAlign = centered;
 

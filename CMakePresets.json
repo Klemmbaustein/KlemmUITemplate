@@ -18,6 +18,7 @@
     },
     {
       "name": "debug",
+      "generator": "Visual Studio 17 2022",
       "displayName": "Debug",
       "inherits": "windows-base",
       "architecture": {
@@ -30,6 +31,7 @@
     },
     {
       "name": "release",
+      "generator": "Visual Studio 17 2022",
       "displayName": "Release",
       "inherits": "windows-base",
       "cacheVariables": {
@@ -38,6 +40,7 @@
     },
     {
       "name": "rel-with-debuginfo",
+      "generator": "Visual Studio 17 2022",
       "displayName": "Release with Debug Info",
       "inherits": "windows-base",
       "cacheVariables": {
