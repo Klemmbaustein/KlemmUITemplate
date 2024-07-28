@@ -47,28 +47,11 @@ endif()
 
 add_subdirectory("dependencies/KlemmUI/" "deps/KlemmUI")
 
+use_klemmui_markup(${TARGET_NAME} ${MARKUP_DIR} ${MARKUP_HEADER_DIR})
+
 target_link_libraries(${TARGET_NAME} PRIVATE KlemmUI)
 
-# Parse UI files and generate C++ headers for them.
-# Ninja doesn't re-check dependencies after running the command, so it has to be run twice.
-add_subdirectory("dependencies/KlemmUI/Markup" "deps/bin")
-
-add_custom_target(
-	WriteHeaders
-	COMMENT "Running build command."
-)
-
-add_custom_command(
-	TARGET WriteHeaders
-	COMMAND $<TARGET_FILE:KlemmUIHT> -i ${CMAKE_SOURCE_DIR}/${MARKUP_DIR} -o ${CMAKE_SOURCE_DIR}/${MARKUP_HEADER_DIR}
-)
-
-add_dependencies(WriteHeaders KlemmUIHT)
-add_dependencies(${TARGET_NAME} WriteHeaders)
-
 # Copy KlemmUI shader files into the app dir
-add_custom_command(
-	TARGET ${TARGET_NAME} POST_BUILD
-	COMMAND ${CMAKE_COMMAND} -E copy_directory
-	${CMAKE_SOURCE_DIR}/dependencies/KlemmUI/Shaders ${CMAKE_SOURCE_DIR}/${APP_SHADER_DIR}
-)
+file(COPY ${CMAKE_SOURCE_DIR}/dependencies/KlemmUI/Shaders DESTINATION ${CMAKE_SOURCE_DIR}/${APP_SHADER_DIR})
+
+target_compile_definitions(${TARGET_NAME} PRIVATE SHADER_DIR="${APP_SHADER_DIR}")
